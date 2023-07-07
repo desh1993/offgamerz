@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Currency extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'currency_name',
+        'exchange_rate'
+    ];
+
+    protected $casts =
+    [
+        'exchange_rate' => 'float',
+    ];
 }
